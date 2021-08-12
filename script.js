@@ -30,8 +30,11 @@ Não posso:
 */
 
 //Variáveis e tipos de dados
-var name = 'Bianca';
+const name = "Bianca";
 console.log(typeof name); //tipo de dado da variavel
 let age = 19;
 let isHuman = true;
 
+//Concatenação
+console.log('A ' + name + 'tem ' + age + 'anos') //ou:
+console.log(`A ${name} tem ${age} anos`)
