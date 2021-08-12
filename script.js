@@ -28,3 +28,10 @@ Não posso:
     iniciar com numeros
     espaços vazios no nome
 */
+
+//Variáveis e tipos de dados
+var name = 'Bianca';
+console.log(typeof name); //tipo de dado da variavel
+let age = 19;
+let isHuman = true;
+
