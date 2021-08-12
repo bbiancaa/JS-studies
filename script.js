@@ -15,3 +15,16 @@ console.log('agora o valor de y eh ', y)
 //       agora o valor de y eh = 0
 //isso acontece pq o y ta sobrescrevendo o let y, já que no escopo o y não esta usando var. reservada
 //isso eh chamado de hoisting
+
+//Nome de variáveis
+//JS é case-sensitive (A é diferente de a)
+/* Posso:
+    iniciar com caracteres especiais
+    iniciar com letras
+    colocar acentos
+    letras maiusculas e minisculas
+
+Não posso:
+    iniciar com numeros
+    espaços vazios no nome
+*/
