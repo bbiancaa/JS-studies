@@ -56,3 +56,14 @@ let number1 = 34
 let number2 = 25
 console.log(`o numero 1 eh ${number1}`)
 console.log(`a soma dos numeros eh ${sum(number1, number2)}`)
+
+
+//Funções construtoras
+function Person(name){
+    this.name = name
+    this.walk = function(){
+        return "walking"
+    }
+}
+const bianca = new Person("bianca")
+console.log(bianca.walk())
