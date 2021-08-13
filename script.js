@@ -38,3 +38,15 @@ let isHuman = true;
 //Concatenação
 console.log('A ' + name + 'tem ' + age + 'anos') //ou:
 console.log(`A ${name} tem ${age} anos`)
+
+//Funções
+function createPhrases(){
+    console.log('Alguma coisa aqui')
+}
+createPhrases() //chama a função
+
+//Function expression
+const sum = function(number1, number2){ //parametros
+    console.log(number1 + number2)
+}
+sum(4,5)//argumentos
