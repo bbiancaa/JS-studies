@@ -47,6 +47,12 @@ createPhrases() //chama a função
 
 //Function expression
 const sum = function(number1, number2){ //parametros
-    console.log(number1 + number2)
+    total = number1 + number2
+    return total
+
 }
-sum(4,5)//argumentos
+//sum(4,5)//argumentos
+let number1 = 34
+let number2 = 25
+console.log(`o numero 1 eh ${number1}`)
+console.log(`a soma dos numeros eh ${sum(number1, number2)}`)
