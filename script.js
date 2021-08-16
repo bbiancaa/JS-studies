@@ -67,3 +67,14 @@ function Person(name){
 }
 const bianca = new Person("bianca")
 console.log(bianca.walk())
+
+//Type conversion
+//Alteração de um tipo de dado para outro tipo
+console.log('9' + 5)// resultado: 95, pois haverá concatenação, o js opta por obrigar o 5 a se tornar string
+console.log(Number('9') + 5)// resultado: 14, js converte string para numero
+
+//Tranformar string em numero e numero em string
+let string = "123"
+console.log(Number(string))//converteu pra numero
+let number = 321
+console.log(String(number))//converteu pra string
