@@ -78,3 +78,39 @@ let string = "123"
 console.log(Number(string))//converteu pra numero
 let number = 321
 console.log(String(number))//converteu pra string
+
+//Manipulação de dados
+//Tamanho de uma string e quantos digitos tem um numero
+let word = "bianca"
+console.log(word.lenght)//saida = 6
+let number = 1234
+console.log(String(number).length) // saida = 4, pois tranformou o numero em string, se tornando possivel contabilizar os digitos
+//Transformar um número quebrado com 2 casas decimais e trocar ponto por vírgula
+let number = 32139.1937129
+console.log(number.toFixed(2))// passa como parametro o numero de casas decimais que voce quer,nesse caso 2
+//saida: 32139.19
+console.log(number.toFixed(2).replace(".", ","))//essa função trocará o ponto por virgula
+//saida: 32139,19
+//Tranformar letras minusculas em maiusculas e vice versa
+let word = "Hello World"
+console.log(word.toUpperCase())
+console.log(word.toLowerCase())
+//Separação de strings
+let phrase = "I am not sure of what im doing"
+let myArray = phrase.split(" ")//pode ser qualquer parametro
+//Encontrando palavras em frases
+let phrase = "I have no idea"
+console.log(phrase.includes("idea"))//retorna true, includes é case sensitive
+//Manipulando arrays
+let techs = ["html", "css", "js"]
+//adicionar um item no fim:
+console.log(techs.push("nodejs"))
+//adcionar um item no começo:
+console.log(techs.unshift("reactjs"))
+//remover item do final da array:
+console.log(techs.pop())
+//remover do começo:
+console.log(techs.shift())
+//remover um ou mais itens em qualquer posição do array:
+
+
