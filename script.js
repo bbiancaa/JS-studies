@@ -128,4 +128,30 @@ delete person.age //deleta o age
 condition ? value1 : value2
 //           true    false    
  
+//Condionais e controle de fluxo
+if (temperature >= 37.5){
+    console.log('Febre alta')
+}else if (temperature < 37.5 && temperature >=37){
+    console.log('Febre moderada')
+}else{
+    console.log('Pessoa saudavel')
+}
+//Switch
+switch(expression){
+    case 'a':
+        //codigo
+        break
+}
+//Throw and Try/Catch
+function sayMyName(name){
+    if (name===''){
+        //throw new Error("Nome necessário")//or
+        throw 'Nome necessário'
+    }
+}
+try{
+    sayMyName()
+}catch(e){
+    console.log(e)
 
+}
