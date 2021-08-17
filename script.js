@@ -155,3 +155,26 @@ try{
     console.log(e)
 
 }
+
+//Estruturas de repetição
+for (condição){
+}
+let i = 2
+while (i<10){
+    console.log(i)
+    i++
+}
+let name = 'Bianca'
+//For of
+for (let char of name){
+    console.log(char)
+}
+//For in
+//cria um loop em cima de um objeto
+let pessoa ={
+    name = 'Bianca',
+    age = 19
+}
+for(let property in person){
+    console.log(property)
+}
