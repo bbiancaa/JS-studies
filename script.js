@@ -113,4 +113,19 @@ console.log(techs.pop())
 console.log(techs.shift())
 //remover um ou mais itens em qualquer posição do array:
 
+//Expressões e operadores
+//New: funciona para criar um novo objeto
+let name = new String('Bianca')
+//Typeof
+console.log(typeof "bianca")// retorna o tipo, nesse caso string
+//Delete
+const person = {
+    name = 'Bianca',
+    age  = 19
+}
+delete person.age //deleta o age
+//Operador condicional ternário
+condition ? value1 : value2
+//           true    false    
+ 
 
