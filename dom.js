@@ -83,3 +83,11 @@ img.hasAttributes()//true or false se tem algum atributo
 //HEIGHT e WIDTH - são propriedades e métodos dos objetos Element e HTMLElement, a maioria é read only
 const section = document.querySelector('.animais');
 section.clientHeight;//client + padding
+
+//ADD EVENTLISTENER - adiciona uma função ao elemento, esta chamada de callback, que será ativada
+//assim que certo evento ocorrer nesse elemnto
+const img = document.querySelector('img');
+//elemento.addEventListener(event, callback, options) //3 parametro eh opcional
+img.addEventListener('click', function(){
+    console.log('clicou')
+})
