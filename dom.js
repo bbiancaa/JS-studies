@@ -29,32 +29,53 @@
 
 //SELEÇÃO DE ELEMENTOS
 //ID - seleciona e retorna os elementos do DOM
-const contatos = document.getElementById('contato')//retorna null caso nao exista
-console.log(contatos);
-//CLASSE e TAG
-const contato = document.getElementsByClassName('grid-section contato')//seleciona pela classe, retorna um HTML colection
-const ul = document.getElementsByTagName('ul')//seleciona todas as ul's e retorna uma html collection
-//SELETOR GERAL ÚNICO - querySelector - retorna o primeiro elemento que combinar com o seu seletor CSS
-const animais = document.querySelector('.animais');//puxa classe
-const contato = document.querySelector('#contato');//puxa item com id
-//SELETOR GERAL LISTA - querySelectorAll - retorna todos os elementos compatíveis com o seletor CSS em uma NodeList
-const gridSection = document.querySelectorAll('.grid-section')
-//diferente do getElementByClassName, a lista é estática, ou seja, não ao vivo
-//ARRAY-LIKE - htmlcollection e nodelist são array-like, parecem uma array mas não são. o método
-//de array forEach() por exemplo, existe apenas em NodeList
+// const contatos = document.getElementById('contato')//retorna null caso nao exista
+// console.log(contatos);
+// //CLASSE e TAG
+// const contato = document.getElementsByClassName('grid-section contato')//seleciona pela classe, retorna um HTML colection
+// const ul = document.getElementsByTagName('ul')//seleciona todas as ul's e retorna uma html collection
+// //SELETOR GERAL ÚNICO - querySelector - retorna o primeiro elemento que combinar com o seu seletor CSS
+// const animais = document.querySelector('.animais');//puxa classe
+// const contato = document.querySelector('#contato');//puxa item com id
+// //SELETOR GERAL LISTA - querySelectorAll - retorna todos os elementos compatíveis com o seletor CSS em uma NodeList
+// const gridSection = document.querySelectorAll('.grid-section')
+// //diferente do getElementByClassName, a lista é estática, ou seja, não ao vivo
+// //ARRAY-LIKE - htmlcollection e nodelist são array-like, parecem uma array mas não são. o método
+// //de array forEach() por exemplo, existe apenas em NodeList
 
-//FOREACH - faz um loop em cada elemento da lista
-const imgs = document.querySelectorAll('img');
-imgs.forEach(function(item){
-    console.log(item)
-})
-//caso um objeto não possua um método array-like, o ideal é transformar em array
-//Como transformar objetos em array:
-const titulos = document.getElementsByClassName('titulo');
-const titulosArray = Array.from(titulos);
-//ARROW FUNCTION -  sintaxe curta em relação a função normal, basta remover apalavra chave function e 
-//adicionar a fat arrow => apos os argumentos
-const imgs = document.querySelectorAll('img');
-imgs.forEach((item) => {
-    console.log(item);
-})
+// //FOREACH - faz um loop em cada elemento da lista
+// const imgs = document.querySelectorAll('img');
+// imgs.forEach(function(item){
+//     console.log(item)
+// })
+// //caso um objeto não possua um método array-like, o ideal é transformar em array
+// //Como transformar objetos em array:
+// const titulos = document.getElementsByClassName('titulo');
+// const titulosArray = Array.from(titulos);
+// //ARROW FUNCTION -  sintaxe curta em relação a função normal, basta remover apalavra chave function e 
+// //adicionar a fat arrow => apos os argumentos
+// const imgs = document.querySelectorAll('img');
+// imgs.forEach((item) => {
+//     console.log(item);
+// })
+
+//CLASS LIST - retorna uma lista com as classes do elemento. Permite adicionar,remover e verificar se contém
+const menu = document.querySelector('.menu');
+menu.className//string
+menu.classList//lista de classes
+menu.classList.add('ativo');//adiciona
+menu.classList.remove('ativo');
+menu.classList.toggle('ativo')//adiciona/remove a classe
+menu.classList.contains('ativo')//true or false
+menu.classList.replace('ativo', 'inativo') 
+//ATTRIBUTES - retorna uma array-like com os atributos do elemento
+const animais = document.querySelector('.animais');
+animais.attributes//retorna todos os atributos, parece um objeto mas é array
+animais.attributes[0]//retorna o primeiro atributo 
+//GETATRIBUTTE e SETATTRIBUTE - métodos que retornam ou definem de acordo com o objeto selecionado
+const img = document.querySelector('img');
+img.getAttribute('src')//valor do src
+img.setAttribute('alt', 'Lala') //muda o alt, o set cria um atributo se não existir ou apenas atualiza
+img.hasAttribute('id') //true or false
+img.removeAttribute('alt');
+img.hasAttributes()//true or false se tem algum atributo
