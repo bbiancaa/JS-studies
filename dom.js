@@ -91,3 +91,19 @@ const img = document.querySelector('img');
 img.addEventListener('click', function(){
     console.log('clicou')
 })
+
+//TRANSVERSING e MANIPULAÇÃO
+//propriedades que retornam uma string contendo o html ou texto, sendo possivel atribuir um novo
+//elemento nas mesmas
+const menu = document.querySelector('.menu');
+menu.outerHTML; //todo o html do elemento
+menu.innerHTML; //html interno
+menu.innerText; //texto, sem tags
+//TRANSVERSING - como navegar pelo DOM, utilizando suas propriedades e métodos
+const lista = document.querySelector('.animais-lista');
+lista.parentElement
+lista.children
+//and lots of more
+lista.appendChild(lista)//move lista para o final
+lista.removeChild(lista)
+//and lots of more
