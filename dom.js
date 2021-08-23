@@ -79,3 +79,7 @@ img.setAttribute('alt', 'Lala') //muda o alt, o set cria um atributo se não exi
 img.hasAttribute('id') //true or false
 img.removeAttribute('alt');
 img.hasAttributes()//true or false se tem algum atributo
+
+//HEIGHT e WIDTH - são propriedades e métodos dos objetos Element e HTMLElement, a maioria é read only
+const section = document.querySelector('.animais');
+section.clientHeight;//client + padding
