@@ -43,4 +43,18 @@ const gridSection = document.querySelectorAll('.grid-section')
 //ARRAY-LIKE - htmlcollection e nodelist são array-like, parecem uma array mas não são. o método
 //de array forEach() por exemplo, existe apenas em NodeList
 
-
+//FOREACH - faz um loop em cada elemento da lista
+const imgs = document.querySelectorAll('img');
+imgs.forEach(function(item){
+    console.log(item)
+})
+//caso um objeto não possua um método array-like, o ideal é transformar em array
+//Como transformar objetos em array:
+const titulos = document.getElementsByClassName('titulo');
+const titulosArray = Array.from(titulos);
+//ARROW FUNCTION -  sintaxe curta em relação a função normal, basta remover apalavra chave function e 
+//adicionar a fat arrow => apos os argumentos
+const imgs = document.querySelectorAll('img');
+imgs.forEach((item) => {
+    console.log(item);
+})
