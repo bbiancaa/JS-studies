@@ -37,3 +37,12 @@ function Dom (seletor) {
 const li = new Dom('li');
 const li = new Dom('ul');
 
+//PROTOTYPE - é um objeto adicionado a uma função quando a mesma é criada
+//com ela, é possivel adicionar coisas em uma função
+Pessoa.prototype.andar = function(){
+    return 'Pessoa andou'
+}
+console.log(Pessoa.prototype);
+//Coo transformar lista em array
+const lista = document.querySelectorAll('li');
+const listaArray = Array.prototype.slice.call(lista)
