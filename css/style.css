@@ -95,6 +95,10 @@ body, h1, h2, ul, li, p, dd, dt, dl {
     overflow-y: scroll;
     grid-column: 2;
   }
+
+  .animais-lista li{
+    cursor: pointer;
+  }
   
   .animais-lista::-webkit-scrollbar {
     width: 18px;
@@ -206,3 +210,68 @@ body, h1, h2, ul, li, p, dd, dt, dl {
       margin-bottom: 0px;
     }
   }
+/*abaixo, codigo css pra quando clicar numa imagem, esconder as outras section:*/
+.js .js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.ativo{
+  display: block !important;
+  animation: show .5s forwards;
+}
+
+/*o show abaixo eh a variavel
+a função abaixo faz animação para a animação n ficar tao seca*/
+@keyframes show {
+  from{
+    opacity: 0;
+    transform: translate3d(-30px,0,0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+/*estilização do FAQ, para esconder perguntas*/
+.js-accordion dd{
+  display: none;
+}
+/*adicionar setinha se ta ativo ou nao*/
+.js-accordion dt::after{
+  content: '⬎';
+  margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after{
+  content: '⬏';
+  margin-left: 10px;
+}
+
+.js-accordion dd.ativo{
+  display: block;
+  animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown{
+  from{
+    opacity: 0;
+    max-height: 0;
+  }
+  to{
+    max-height: 200px;
+    opacity: 1;
+  }
+}
+
+.js .js-scroll{
+  opacity: 0;
+  transform: translate3d(-30px,0,0);
+  transition: .3s;
+}
+
+.js .js-scroll.ativo{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+  transition: .3s;
+}
