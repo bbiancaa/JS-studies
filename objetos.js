@@ -87,3 +87,37 @@ const valor = ' 23.00 ';
 valor.trim();//remove no inicio e fim
 //trimStart - começo
 //trimEnd - fim
+
+//NUMBER - é a construtora de números, todo número possui as propriedades e métodos do prototype de Number
+//isNaN - is not a Number 
+Number.isNaN(4 + 5)//false
+//isInteger
+Number.isInteger(20)//true
+Number.isInteger(20.1)//false
+//parseFloat - retorna float atraves de uma string
+Number.parseFloat('99.50');//99.50
+//parseInt - retorna int através de uma string, também recebe um 2 parametro que é o radix, 10 é para decimal
+parseInt('99.50', 10);//99
+parseInt(5.29494394, 10)//5
+//float possui decimal, integer não
+//toFixed - arredonda o número com base no total de casas decimais do argumento
+const preco = 2.99
+preco.toFixed();//3
+const carro = 1000.455;
+carro.toFixed(2)//1000.46
+//toString - transforma numero em string, usando o 10 para o sistema decimal
+const preco = 2.99;
+preco.toString(10);//'2.99'
+//toLocaleString - formata o número de acordo com a língua e opções passadas
+const preco = 59.49
+preco.toLocaleString('en-US', {style: 'currency', currency: 'USD'})//$59.49
+
+//MATH
+Math.abs(-5.5)//5.5 retorta o valor absoluto, transformando positivo em negativo
+Math.ceil(4.893483)//5 arredonda para cima, transformando em int
+Math.floor(4.89328)//4 arredonda para baixo, transformando em int
+Math.round(4.989)//5 arredonda para o numero integral mais proximo
+Math.max(5,7,9,1,4,0)//9 retorna o maior numero de uma lista de argumentos
+Math.min(5,9,2,4)//2 retorna o menor numero
+Math.random();//0.XXX
+Math.floor(Math.random() * 100);//entre 0 e 100
