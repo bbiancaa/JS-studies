@@ -228,3 +228,11 @@ Dom.prototype.ativo = function(classe){
 const lista = new Dom('ul');
 lista.ativo('ativar');
 console.log(lista);
+
+//Objects - todo objeto é criado e por isso herda as propriedades e métodos do seu prototype
+const pessoa = new Object({
+    nome: 'Bianca',
+
+});
+//Métodos de Object
+//Object.create(obj, defineProperties) retorna um novo objeto que terá como protótipo o objeto do primeiro argumento
