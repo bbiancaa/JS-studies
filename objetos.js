@@ -211,3 +211,20 @@ const busca5 = numeros.findIndex((numero) => {
     return numero === 5;
 })//3
 //filter() - retorna uma array com a lista de valores que durante a sua iteração retornaram true
+
+//Function
+//Function.length - retorna o total de argumentos da função
+//Function.name - retorna uma string com o nome da função
+//function.call(this, arg1, arg2...) - executa a função, sendo possível passarmos uma nova referencia ao this da mesma
+//o valor de this faz referência ao objeto criado durante a construção do objeto (constructor function)
+//podemos trocar a referência do metodo this utilizando o call();
+function Dom(seletor){
+    this.element = document.querySelector(seletor);
+};
+Dom.prototype.ativo = function(classe){
+    this.element.classList.add(classe);
+};
+
+const lista = new Dom('ul');
+lista.ativo('ativar');
+console.log(lista);
