@@ -121,3 +121,48 @@ Math.max(5,7,9,1,4,0)//9 retorna o maior numero de uma lista de argumentos
 Math.min(5,9,2,4)//2 retorna o menor numero
 Math.random();//0.XXX
 Math.floor(Math.random() * 100);//entre 0 e 100
+
+//ARRAYS - armazenam uma coleção de elementos, podendo ser strings, boolean, number, functions, arrays, objects... 
+Array.isArray(li)//retorna se é array ou não
+
+//Métodos modificadores de arrays:
+//sort - organiza strings e numeros
+const intrumentos = ['Guitarra', 'Baixo', 'Violão'];
+instrumentos.sort();//['Baixo', 'Guitarra', 'Violão']
+//unshift - adiciona elementos ao início da array e retorna o length da mesma
+instrumentos.unshift('Piano')//3
+//push - aidiona elementos ao final da array e retorna o length das mesmas
+instrumentos.push('Acordeon');
+//shift - remove o primeiro elemento da array e retorna o mesmo
+const primeiroInstrumento = instrumento.shift()//Guitarra
+//pop - remove o ultimo elemento da array e retorna o mesmo
+const ultimoInstrumento = instrumento.pop()//Acordeon
+//reverse - inverte os itens da array
+//splice(index, remover, item1, item2...) - adiciona valores na array a partir do index, remove a quantidade
+//de itens que for passada no segundo parametro e retorna esses itens
+const carros = ['Ford', 'Fiat', 'Honda'];
+carros.splice(1, 0, 'Kia', 'Mustang')
+carros;//['Ford', 'Kia', 'Mustang', 'Fiat', 'Honda']
+//copyWithin(alvo, inicio, final) - a partir do alvo ele irá copiar a array começando do incio até o final
+//e vai preencher a mesma com essa cópia. Caso omita valores de início e final, ele irá utilizar como 
+//início 0 e final o valor total da array
+['item1', 'item2', 'item3'].copyWithin(2,0,3)//['item1', 'item2', 'item1', 'item2']
+
+//Métodos de acesso - não modificam a array original, apenas retornam a array modificada
+//concat
+const carro1 = ['Honda', 'Kia'];
+const carro2 = ['Ferrari', 'BMW'];
+const carros = carro1.concat(carro2);
+//includes - verifica se a array possui o valor e retorna true ou false
+const linguagens = ['html', 'css', 'js'];
+linguagens.includes('css')//true
+//indexOf - verifica se a array possui o valor e retorna o index do primeiro valor da array
+linguagens.indexOf('js')//2
+//lastIndexOf - retorna o index do ultimo
+linguagens.lastIndexOf('js')//2
+//join - junta todos os valores numa string unica
+linguagens.join()//htmlcssjs
+linguagens.join(' ')//html css js
+//slice(inicio, final) - retorna os itens da array começando pelo incio e indo ate o valor final
+linguagens.slice(2)//['js]
+linguagens.slice(0,1)//['html', 'css']
