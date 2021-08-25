@@ -166,3 +166,48 @@ linguagens.join(' ')//html css js
 //slice(inicio, final) - retorna os itens da array começando pelo incio e indo ate o valor final
 linguagens.slice(2)//['js]
 linguagens.slice(0,1)//['html', 'css']
+
+//Array e Iteração
+//map(callback(itemAtual, index, array)) - funciona da mesma forma que o forEach(), retornando uma nova
+//array com valores atualizados de acordo com o return de cada iteração
+const letras = ['a', 'b', 'c'];
+const newLetras = letras.map((item) => {
+    return 'Letra ' + item;
+}) 
+letras;//['a', 'b', 'c']
+newLetras;//['Letra a', 'Letra b', 'Letra c']
+//reduce(callback(acumulador, valorAtual, index, array), valorInicial) - executa a função de callback para 
+//cada item da Array. Um valor especial existe nessa função de callback, ele é chamado de acumulador, mas 
+//é na verdade apenas o retorno da iteração anterior
+const aulas = [10, 25, 30];
+const total1 = aulas.reduce((acumulador, atual) => {
+    return acumulador + atual;
+});
+total1; //65
+const total2 = aulas.reduce((acc, cur) => acc + cur, 100);
+total2;//165
+//Maior valor com reduce
+const numeros = [10, 25, 60, 5, 35];
+const maiorValor = numeros.reduce((anterior, atual) => {
+    return anterior < atual ? atual : anterior;
+});
+maiorValor;//60
+//reduceRight - itera da direita para a esquerda, enquanto o reduce itera da esquerda para a direita
+//some() - se pelo menos um return da iteração for true, ele retorna true
+const frutas = ['Pera', 'Uva', 'Maça'];
+const temUva = frutas.some((fruta) => {
+    return fruta === 'Uva';
+});//true
+//every() - se todos os returns das iterações forem true, o método irá retornar true. se pelo menos um for false, ele retornara false
+const frutas = ['Pera', 'Uva', 'Maça', ''];
+const arraysCheias = frutas.every((fruta) =>{
+    return fruta;//false, pois uma fruta esta vazia, que e um valor false
+});
+//find() - retorna o valor atual da primeira iteração que retorna um valor true
+const numeros = [6,9,3,5,2];
+const buscaMaior7 = numeros.find(x => x > 7);//9
+//findIndex() - retorna o index deste valor na array
+const busca5 = numeros.findIndex((numero) => {
+    return numero === 5;
+})//3
+//filter() - retorna uma array com a lista de valores que durante a sua iteração retornaram true
