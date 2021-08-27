@@ -139,3 +139,20 @@ $('.abrir-modal').click(function(){
         $(this).text('Abrir Modal')
     }
 });
+
+//Métodos gerais
+//.attr() - pega ou define o valor de um atributo específico
+$('a').attr('href');//pega apenas o primeiro e para
+$('a').attr('href', 'https://google.com')//aqui seta de todos
+
+//.removeAttr() - remove o atributo
+$('a').removeAttr('href')
+
+//.val() - pega ou define o valor de um elemento. Utilizado em input, select ou textarea, pois são elementos que tem valores
+var name = $('input.name').val();
+
+//.remove() - remove um elemento do dom
+$('.modal').remove();
+
+//.empty() - remove os filhos do elemento do dom
+$('.modal').empty(); //n tira apenas o modal especifico, mas tira tudo que há dentro do modal
