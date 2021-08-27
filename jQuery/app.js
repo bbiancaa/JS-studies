@@ -156,3 +156,39 @@ $('.modal').remove();
 
 //.empty() - remove os filhos do elemento do dom
 $('.modal').empty(); //n tira apenas o modal especifico, mas tira tudo que há dentro do modal
+
+//Estilos
+//.css() - pega ou define o valor de uma propriedade css
+var asize = $('p').css('font-size'); //precisa criar a variável, se n n estou fazendo nada com ela,pode por o que quiser, ex: padding, height, background..
+console.log(asize);
+//posso definir uma margem assim:
+$('.btn').css('margin', '200px');
+//posso definir mais de uma propriedade:
+$('a').css({
+    'max-width': '200px',
+    'background': 'blue' 
+})
+//voce não precisa definir valores fixos:
+$(document).on('scroll', function(){
+    var distancia = $(this).scrollTop();
+    $('.modal').css('height', distancia * 10);//jquery ja sabe que é px, não precisa definir
+})
+//manipulando css, recebe o numero em px de volta:
+var modal = $('.modal'),
+    height = modal.height();
+    //innerHeight() 
+    //outerHeight()
+    //outerHeightMargin
+    //width
+
+//.offset() - retorna um objeto com as distâncias de top e left do elemento em relação ao documento
+var modal = $('.modal').offset();
+    modalTop = modal.top;
+    modalLeft = modal.left;
+
+//.scrollTop() - pega o topo do elemento em relação ao seu scroll
+//há também o scrollLeft
+$(window).scroll(function(){
+    var windowTop = $(this).scrollTop();
+    console.log(top)
+})
