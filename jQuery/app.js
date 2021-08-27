@@ -44,3 +44,19 @@ $('p').text();
 
 //.prepend() e .prependTo() - mesma coisa que append, porem insere antes do conteúdo da seleção
 $('h1').prepend('Teste');
+
+//Modo de inserção outside e around
+//.after() e .insertAfter - adiciona conteúdo após o item selecionado
+$('h2').after('blabla');
+$('blabla').insertAfter('h2');
+
+//.before() e insertBefore() - adiciona o conteúdo antes do item selecionado
+$('h2').before('blabla');
+$('blabla').insertBefore('h2');
+
+//.wrap() - envolve o conteúdo selecionado nas tags especificadas
+$('p').wrap('<div class="azul"></div>'); //ent]ao todo paragrafo que tiver no site, vai ser colocado nessa div
+//tem que colocar as tags que vc quer envoler, não pode ser string pura
+
+//.unwrap() - remove o elemento pai do item selecionado
+$('ul li a').unwrap();
