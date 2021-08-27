@@ -60,3 +60,47 @@ $('p').wrap('<div class="azul"></div>'); //ent]ao todo paragrafo que tiver no si
 
 //.unwrap() - remove o elemento pai do item selecionado
 $('ul li a').unwrap();
+
+//Eventos básicos
+//.click() aciona uma função após o usuário clicar no target
+$('a').click(function(){
+    $('a').text('Clicou');//o botao em si muda p/ Clicou
+});
+
+//os eventos também podem ser escritos usando a função .on
+$('a').on('click',function(){
+    $('a').text('Clicou');//o botao em si muda p/ Clicou
+});
+
+//use o this para se referir ao objeto do evento
+$('a').on('click',function(){
+    $(this).text('Clicou');//vai conversar exatamente com o objeto que clicou
+});
+
+//Event object
+$('a').on('click', function(e){//o parametro virara um objeto de evento, que tem muita coisa linkada a ele
+    e.preventDefault();//previne o comportamento padrão desse objeto
+    $(this).text('Clicou');
+});
+
+//mouseenter, primeira etapa do hover
+$('a').on('mouseenter', function(e){
+    e.preventDefault();
+    $(this).text('Mouse Hover');
+});
+
+//mouseleave, segunda parte do hover
+$('a').on('mouseleave', function(e){
+    e.preventDefault();
+    $(this).text('Mouse Hover');
+});
+
+//scroll
+$(document).on('scroll', function(){
+    $('a').append('Colocou o mouse')
+})
+
+//resize
+$(window).resize(function(){
+    $('a').text($('body').width())
+})
