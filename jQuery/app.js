@@ -192,3 +192,25 @@ $(window).scroll(function(){
     var windowTop = $(this).scrollTop();
     console.log(top)
 })
+
+//Animação com jquery
+//.animate() - anima propriedades css para o valor que você definir
+$('.modal').animate({//posso animais mais de uma propriedade ao mesmo tempo:
+    height: 500,
+    width: 200
+}, 1000)//aqui posso colocar a velocidade da animação, aqui é 1s, pois conta milissegundos
+
+$('a').click(function(){
+    $('.modal').animate({
+        borderTopWidth: 20,
+        height: 100,
+    }, 1000, 'swing').animate
+})
+//fadeOut() - anima a opacidade do elemento até 0 e depois aplica display:nome
+$('.modal').fadeOut();//ou seja, esconde o elemento
+//fadeIn() - mostra o elemento
+$('.modal').fadeIn();
+//slideUp() - esconde o elemento com uma animação de slide
+$('.modal').slideUp()
+//slideDown - mostra o elemento
+$('.modal').slideDown()
