@@ -104,3 +104,38 @@ $(document).on('scroll', function(){
 $(window).resize(function(){
     $('a').text($('body').width())
 })
+
+//Classes
+//.addClass() - adiciona uma ou mais classe ao elemento
+$('a').click(function(){
+    $(this).addClass('active');
+});
+
+//.removeClass() - remove uma ou mais classe ao elemento
+$('a').click(function(){
+    $(this).removeClass('active');
+});
+
+//.toggleClass() - adiciona a classe ao elemento caso ela não exista ou remove caso ela exista
+$('a').click(function(){
+    $(this).toggleClass('active');
+});
+
+//hasClass() - verifica se a classe existe e retorna true ou false
+$('a').click(function(){
+    var condition = $(this).hasClass('active');
+    if (condition){
+        console.log('Possui a classe');
+    }
+});
+
+//ex utilizando os conceitos
+$('.abrir-modal').click(function(){
+    $('.modal').toggleClass('active');
+    var condicao = $('.modal').hasClass('active');
+    if(condicao){
+        $(this).text('Fechar Modal');
+    }else{
+        $(this).text('Abrir Modal')
+    }
+});
