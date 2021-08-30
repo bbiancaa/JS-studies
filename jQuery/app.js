@@ -214,3 +214,11 @@ $('.modal').fadeIn();
 $('.modal').slideUp()
 //slideDown - mostra o elemento
 $('.modal').slideDown()
+
+//Transversing
+//each() - seleciona cada elemento isoladamente
+$('a').each(function(){//cria função p cada a que existe no código
+    $(this).click(function(){
+        $(this).addClass('active');
+    });
+});
